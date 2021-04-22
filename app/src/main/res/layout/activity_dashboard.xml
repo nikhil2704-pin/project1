@@ -5,7 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".dashboard">
-    
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="User Phone Number"
+                android:layout_margin="15dp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/txtPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp">
+
+            </TextView>
+
+
+    </LinearLayout>
 
 </ScrollView>

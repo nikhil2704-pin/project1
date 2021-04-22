@@ -8,10 +8,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import com.example.project1.common_func;
 
 public class login extends AppCompatActivity {
     Button button;
     EditText phnum;
+    common_func cf = new common_func();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +31,7 @@ public class login extends AppCompatActivity {
                 String correctphonenumber = "123456789";
                 if(phonenumber.equalsIgnoreCase(correctphonenumber)) {
                     Toast.makeText(getApplicationContext(),"YOU ARE LOGGED IN",Toast.LENGTH_SHORT).show();
-
+                    cf.setUserSession(getApplicationContext(), phonenumber);
                     Intent intent = new Intent(getApplicationContext(), checkotp.class);
                     startActivity(intent);
                 }
